@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
+  idiomas:any=[];
+  constructor() { 
+    this.idiomas=[
+      {
+      nombre: "Euskera",
+      bandera: './../../assets/basque.svg'
+      },
+      {
+        nombre: "español",
+        bandera: './../../assets/spanish.svg'
+      }
+    ]
+  }
 }

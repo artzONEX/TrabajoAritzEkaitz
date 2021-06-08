@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns1="http://sozi.baierouge.fr" id="svg559" inkscape:version="0.48.3.1 r9886" viewBox="0 0 304.05 168.84" sodipodi:version="0.32" version="1" y="0" x="0" sodipodi:docname="_svgclean2.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <sodipodi:namedview id="base" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-height="645" inkscape:window-maximized="0" inkscape:zoom="0.22425739" showgrid="false" inkscape:current-layer="svg559" inkscape:cx="371.10469" inkscape:cy="-356.95654" inkscape:window-width="674"/>
+  <g id="g571" transform="matrix(.78253 0 0 .78253 -28.946 -46.566)">
+    <rect id="rect564" style="fill-rule:evenodd;fill:#ff0000" height="214.79" width="388.5" y="59.643" x="37.004"/>
+    <path id="path570" style="fill-rule:evenodd;fill:#008d00" inkscape:connector-curvature="0" d="m425.54 76.247-0.11-16.74-36.9 0.172-351.49 197.73-0.001 16.99 36.936-0.24 351.56-197.91z"/>
+    <path id="path568" style="fill-rule:evenodd;fill:#008d00" inkscape:connector-curvature="0" d="m37.143 76.973v-17.051l35.659-0.139 352.53 197.84v16.68l-38.08-0.14-350.11-197.19z"/>
+    <rect id="rect565" style="fill-rule:evenodd;stroke-width:.89061;fill:#ffffff" height="215.62" width="32.864" y="59.643" x="213.06"/>
+    <rect id="rect566" style="fill-rule:evenodd;stroke-width:1.1978;fill:#ffffff" transform="matrix(-.0014844 -1 1 -.00045377 0 0)" height="388.48" width="32.864" y="36.766" x="-183.57"/>
+  </g>
+  <metadata id="metadata10">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

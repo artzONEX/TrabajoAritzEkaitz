@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      <ion-icon src="./../../assets/icon/osakidetza logo.png"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,22 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  <ion-img style="margin-top:35px" src="./../../assets/icon/osakidetza logo.png"></ion-img>
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    
+    <ion-grid>
+      <ion-row style="margin-bottom: 25px;">
+        <ion-col>
+        <h3>Seleccione su idioma</h3>
+      </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngFor="let item of idiomas">
+      <ion-button color="secondary"><ion-icon src='{{item.bandera}}' size="small" style="margin-right: 5px;"></ion-icon>{{item.nombre}}</ion-button>
+    </ion-col>
+    </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
