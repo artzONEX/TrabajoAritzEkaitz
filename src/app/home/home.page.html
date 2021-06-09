@@ -1,31 +1,32 @@
 <ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
-    
-    <ion-item class="ion-float-right">
-      <ion-icon name="contrast-outline"></ion-icon>
-      <ion-toggle (ionChange)='toggleTheme($event)'></ion-toggle>
-    </ion-item>
-  </ion-toolbar>
+    <ion-toolbar>
+
+        <ion-item class="ion-float-right">
+            <ion-icon name="contrast-outline"></ion-icon>
+            <ion-toggle (ionChange)='toggleTheme($event)'></ion-toggle>
+        </ion-item>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item  [ngSwitch]="nocturno" style="margin-top:15px" class="ion-float-left">
-    <ion-img *ngSwitchCase="false" src="./../../assets/icon/osakidetza logo.png"></ion-img>
-    <ion-img *ngSwitchCase="true" src="./../../assets/icon/osakidetza-blanco.png"></ion-img>
-  </ion-item>
-  <div id="container">
-    
-    <ion-grid>
-      <ion-row style="margin-bottom: 25px;">
-        <ion-col>
-        <h3>Seleccione su idioma</h3>
-      </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col *ngFor="let item of idiomas">
-      <ion-button color="secondary" [routerLink]="[ '/page1' ]"><ion-icon src='{{item.bandera}}' size="small"  ></ion-icon>{{item.nombre}}</ion-button>
-    </ion-col>
-    </ion-row>
-    </ion-grid>
-  </div>
+    <ion-item [ngSwitch]="nocturno" style="margin-top:15px" class="ion-float-left">
+        <ion-img *ngSwitchCase="false" src="./../../assets/icon/osakidetza logo.png"></ion-img>
+        <ion-img *ngSwitchCase="true" src="./../../assets/icon/osakidetza-blanco.png"></ion-img>
+    </ion-item>
+    <div id="container">
+
+        <ion-grid>
+            <ion-row style="margin-bottom: 25px;">
+                <ion-col>
+                    <h3>Seleccione su idioma</h3>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col *ngFor="let item of idiomas">
+                    <ion-button color="secondary" [routerLink]="[ '/page2' ]">
+                        <ion-icon src='{{item.bandera}}' size="small"></ion-icon>{{item.nombre}}</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
 </ion-content>

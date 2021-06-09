@@ -1,36 +1,69 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>page4</ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
-  <div class="container">
-    <h4 class="ion-text-center">Complete toda la información para evitar errores en la identificación</h4>
-          Teléfono para enviar SMS del resultado
-          <ion-input type="number" placeholder="000000000" #telefono></ion-input>
-          Email
-          <ion-input type="email" placeholder="ejemplo@gmail.com"></ion-input>
-  </div>
-  <div class="container mt-5">
-    Ncionalidad
-    <ion-input type="text" placeholder="España"></ion-input>
-    <ion-grid>
-      <ion-row>
-        <ion-col class="ion-float-right">
-            <ion-radio value="cord"></ion-radio>
-            <ion-label class="ion-text-center">DNI</ion-label>
-          </ion-col>
-        <ion-col class="ion-float-right">
-            <ion-radio value="cord"></ion-radio>
-            <ion-label class="ion-text-center">Pasaporte</ion-label>
-          </ion-col>
-        <ion-col class="ion-float-right">
-            <ion-radio ></ion-radio>
-            <ion-label class="ion-text-center">TIS</ion-label>
-          </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
-        </ion-content>
+    <ion-content>
+        <ion-img style="margin-top:35px;max-width: 50%;margin-left: auto;
+      margin-right: auto;" class="center" src="./../../assets/icon/osakidetza logo.png"></ion-img>
+        <p style="margin-top: 35px; text-align: center;" class="container">Complete la siguiente información para finalizar el registro de la petidion</p>
 
+        <form style="margin-top:35px;max-width: 75%;margin-left: auto;
+      margin-right: auto;">
+
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Primer apellido</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Segundo apellido</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">Sexo:</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                  Masculino
+                </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                  Femenino
+                </label>
+                    </div>
+
+                </div>
+            </fieldset>
+
+
+        </form>
+
+
+        <div class="d-flex justify-content-evenly " style="margin-top: 100px; margin-bottom: 30px;">
+            <button type="button" [routerLink]="['/home']" class="btn btn-primary ">
+            Cancelar
+                </button>
+
+            <button type="button" [routerLink]="['/home']" class="btn btn-primary ">
+            Continuar 
+                </button>
+        </div>
+    </ion-content>
+
+
+</ion-content>

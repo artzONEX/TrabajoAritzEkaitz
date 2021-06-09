@@ -17,7 +17,7 @@
         <input type="number" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
     </div>
 
-    <form style="margin-top:35px;max-width: 75%;margin-left: auto; margin-right: auto">
+    <form style="margin-top:35px;max-width: 75%;margin-left: auto; margin-right: auto" class="p-3 mb-2 bg-primary text-white rounded-3">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Indique el colectivo al que pertenece</label>
             <input type="text" class="form-control" id="exampleInputEmail1">
@@ -30,11 +30,11 @@
 
 
     <div class="d-flex justify-content-evenly " style="margin-top: 100px; margin-bottom: 30px;">
-        <button type="button" class="btn btn-primary ">
+        <button type="button" [routerLink]="['/home']" class="btn btn-primary ">
             Cancelar
                 </button>
 
-        <button type="button" class="btn btn-primary ">
+        <button type="button" [routerLink]="['/page4']" class="btn btn-primary ">
             Continuar 
                 </button>
     </div>
