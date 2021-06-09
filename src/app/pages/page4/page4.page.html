@@ -5,5 +5,32 @@
 </ion-header>
 
 <ion-content>
+  <div class="container">
+    <h4 class="ion-text-center">Complete toda la información para evitar errores en la identificación</h4>
+          Teléfono para enviar SMS del resultado
+          <ion-input type="number" placeholder="000000000" #telefono></ion-input>
+          Email
+          <ion-input type="email" placeholder="ejemplo@gmail.com"></ion-input>
+  </div>
+  <div class="container mt-5">
+    Ncionalidad
+    <ion-input type="text" placeholder="España"></ion-input>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-float-right">
+            <ion-radio value="cord"></ion-radio>
+            <ion-label class="ion-text-center">DNI</ion-label>
+          </ion-col>
+        <ion-col class="ion-float-right">
+            <ion-radio value="cord"></ion-radio>
+            <ion-label class="ion-text-center">Pasaporte</ion-label>
+          </ion-col>
+        <ion-col class="ion-float-right">
+            <ion-radio ></ion-radio>
+            <ion-label class="ion-text-center">TIS</ion-label>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+        </ion-content>
 
-</ion-content>

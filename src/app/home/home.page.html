@@ -23,7 +23,7 @@
       </ion-row>
       <ion-row>
         <ion-col *ngFor="let item of idiomas">
-      <ion-button color="secondary"><ion-icon src='{{item.bandera}}' size="small"  ></ion-icon>{{item.nombre}}</ion-button>
+      <ion-button color="secondary" [routerLink]="[ '/page1' ]"><ion-icon src='{{item.bandera}}' size="small"  ></ion-icon>{{item.nombre}}</ion-button>
     </ion-col>
     </ion-row>
     </ion-grid>
