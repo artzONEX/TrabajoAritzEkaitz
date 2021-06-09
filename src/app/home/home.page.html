@@ -1,17 +1,18 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      <ion-icon src="./../../assets/icon/osakidetza logo.png"></ion-icon>
-    </ion-title>
+    
+    <ion-item class="ion-float-right">
+      <ion-icon name="contrast-outline"></ion-icon>
+      <ion-toggle (ionChange)='toggleTheme($event)'></ion-toggle>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-    </ion-toolbar>
-  </ion-header>
-  <ion-img style="margin-top:35px" src="./../../assets/icon/osakidetza logo.png"></ion-img>
+  <ion-item  [ngSwitch]="nocturno" style="margin-top:15px" class="ion-float-left">
+    <ion-img *ngSwitchCase="false" src="./../../assets/icon/osakidetza logo.png"></ion-img>
+    <ion-img *ngSwitchCase="true" src="./../../assets/icon/osakidetza-blanco.png"></ion-img>
+  </ion-item>
   <div id="container">
     
     <ion-grid>
@@ -22,7 +23,7 @@
       </ion-row>
       <ion-row>
         <ion-col *ngFor="let item of idiomas">
-      <ion-button color="secondary"><ion-icon src='{{item.bandera}}' size="small" style="margin-right: 5px;"></ion-icon>{{item.nombre}}</ion-button>
+      <ion-button color="secondary"><ion-icon src='{{item.bandera}}' size="small"  ></ion-icon>{{item.nombre}}</ion-button>
     </ion-col>
     </ion-row>
     </ion-grid>

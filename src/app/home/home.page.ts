@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  nocturno:boolean=false;
   idiomas:any=[];
   constructor() { 
     this.idiomas=[
@@ -20,4 +20,15 @@ export class HomePage {
       }
     ]
   }
+
+  toggleTheme(event){
+    if (event.detail.checked){
+      document.body.setAttribute('color-theme', 'dark');
+      this.nocturno=true;
+    }else{
+      document.body.setAttribute('color-theme', 'light');
+      this.nocturno=false;
+    }
+  }
+
 }
