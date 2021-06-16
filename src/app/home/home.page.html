@@ -1,32 +1,15 @@
-<ion-header [translucent]="true" class="ion-no-border">
-    <ion-toolbar>
 
-        <ion-item class="ion-float-right">
-            <ion-icon name="contrast-outline"></ion-icon>
-            <ion-toggle (ionChange)='toggleTheme($event)'></ion-toggle>
-        </ion-item>
-    </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" >
+  <div class="container mt-5" [ngSwitch]="nocturno">
+    <img *ngSwitchCase="false" src="./../../assets/icon/osakidetza logo.png" class="img-fluid" alt="...">
+    <img *ngSwitchCase="true" src="./../../assets/icon/osakidetza-blanco.png" class="img-fluid" alt="...">
 
-<ion-content [fullscreen]="true">
-    <ion-item [ngSwitch]="nocturno" style="margin-top:15px" class="ion-float-left">
-        <ion-img *ngSwitchCase="false" src="./../../assets/icon/osakidetza logo.png"></ion-img>
-        <ion-img *ngSwitchCase="true" src="./../../assets/icon/osakidetza-blanco.png"></ion-img>
-    </ion-item>
-    <div id="container">
+  </div>
 
-        <ion-grid>
-            <ion-row style="margin-bottom: 25px;">
-                <ion-col>
-                    <h3>Seleccione su idioma</h3>
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col *ngFor="let item of idiomas">
-                    <ion-button color="secondary" [routerLink]="[ '/page2' ]">
-                        <ion-icon src='{{item.bandera}}' size="small"></ion-icon>{{item.nombre}}</ion-button>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
+    <div class="container mt-5">
+                    <h3 class="text-center">Seleccione su idioma</h3>
+                    <div class="d-flex justify-content-around" >
+                      <button type="button" class="btn btn-primary" *ngFor="let item of idiomas" src='{{item.bandera}}' [routerLink]="[ '/page2' ]">{{item.nombre}}</button>
+                   </div>
     </div>
 </ion-content>
