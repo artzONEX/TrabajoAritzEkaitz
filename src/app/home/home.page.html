@@ -1,9 +1,7 @@
-
+<app-header [nocturno]="nocturno"></app-header>
 <ion-content [fullscreen]="true" >
-  <div class="container mt-5" [ngSwitch]="nocturno">
-    <img *ngSwitchCase="false" src="./../../assets/icon/osakidetza logo.png" class="img-fluid" alt="...">
-    <img *ngSwitchCase="true" src="./../../assets/icon/osakidetza-blanco.png" class="img-fluid" alt="...">
-
+  <div class="container mt-5">
+    <img src="./../../assets/icon/osakidetza logo.png" class="img-fluid" alt="...">
   </div>
 
     <div class="container mt-5">

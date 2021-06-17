@@ -1,91 +1,140 @@
 <ion-content>
+
   <div>
-    <div class="container mt-5" [ngSwitch]="nocturno">
-      <img *ngSwitchCase="false" src="./../../../assets/icon/osakidetza logo.png" class="img-fluid" alt="...">
-      <img *ngSwitchCase="true" src="./../../../assets/icon/osakidetza-blanco.png" class="img-fluid" alt="...">
+
+    <div class="container mt-5">
+
+      <img src="./../../../assets/icon/osakidetza logo.png" class="img-fluid" alt="...">
 
     </div>
 
-    <form autocomplete="off" #forma="ngForm" (ngSubmit)="verInfo( forma )">
+    <form class="me-5 ms-5 " autocomplete="off" #forma="ngForm" (ngSubmit)="verInfo( forma )">
 
-      <div class="input-group mb-2">
+      <div class="input-group row mb-2">
+
         <label class="texto-input">Complete toda la información para evitar errores en la
           identificación
           Teléfono para enviar SMS del resultado</label>
+
         <small class="form-text text-danger" *ngIf="telefono.invalid && telefono.touched">Este campo es obligatorio. Por
           favor, rellénelo correctamente.</small>
-        <div class="col-sm-10">
-          <input class="form-control ms-2" type="text" ngModel name="telefono" #telefono="ngModel"
-            [class.is-invalid]="telefono.invalid && telefono.touched" required pattern="[0-9]{9}"
-            placeholder="000000000">
-        </div>
+        <input class="form-control" 
+               type="text" 
+               ngModel name="telefono" 
+               #telefono="ngModel"
+               [class.is-invalid]="telefono.invalid && telefono.touched" 
+               required pattern="[0-9]{9}" 
+               placeholder="000000000">
       </div>
 
       <div class="input-group row mb-2">
+
         <label class="texto-input" id="basic-addon1">Email</label>
+
         <small class="form-text text-danger" *ngIf="correo.invalid && correo.touched">Se ha equivocado al escribir
-          el correo. Por favor, rellénelo correctamente.</small>  
-        <input class="form-control ms-3" type="email" ngModel name="correo" #correo="ngModel"
-            [class.is-invalid]="correo.invalid && correo.touched" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-            placeholder="ejemplo@gmail.com">
+          el correo. Por favor, rellénelo correctamente.</small>
+        <input class="form-control" 
+               type="email" 
+               ngModel name="correo" 
+               #correo="ngModel"
+               [class.is-invalid]="correo.invalid && correo.touched" 
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+               placeholder="ejemplo@gmail.com">
+
       </div>
 
-      <div class="input-group mb-3">
-        <div class="row">
-          <label class="texto-input" id="basic-addon1">Nacionalidad</label>
-          <small class="form-text text-danger" *ngIf="nac.invalid">Este campo es obligatorio. Por favor, rellénelo
-            correctamente.</small>
-          <div class="col-sm-10">
-            <input class="form-control" type="text" ngModel name="nac" #nac="ngModel" [class.is-invalid]="nac.invalid"
-              pattern="[A-Z-Ña-zñÑáéíóúÁÉÍÓÚ]{5,}" required [ngModel]="autofill.nac">
-          </div>
-        </div>
+      <div class="input-group row mb-3">
 
-        <div class="mt-4">
-          <div class="row mb-3 ms-1 me-1">
-            <select class="form-control" [(ngModel)]="escogida" name="opcS" #opcS="ngModel"
-              [class.is-invalid]="opcS.invalid && opcS.touched" required>
-              <option [value]="option" *ngFor="let option of opciones">{{option}}</option>
-            </select>
-            <small class="form-text" [class.text-danger]="opcS.invalid && opcS.touched">Escriba su {{escogida}}</small>
-            <input (keyup.enter)="fillInfo(forma)" class="form-control" type="text" ngModel name="opcDni"
-              #opcDni="ngModel" [(ngModel)]=autofill.opcDNI [class.is-invalid]="opcDni.invalid && opcDni.touched"
-              *ngIf="escogida==='DNI'" required pattern="[0-9]{8}[A-Za-z]{1}" placeholder="XXXXXXXXX">
-            <input (keyup.enter)="fillInfo(forma)" class="form-control" type="text" ngModel name="opcPas"
-              #opcPas="ngModel" [(ngModel)]=autofill.opcPas [class.is-invalid]="opcPas.invalid && opcPas.touched"
-              *ngIf="escogida!=='DNI'" [disabled]="escogida===undefined" required pattern="[0-9]{9}"
-              placeholder="XXXXXXXX">
-          </div>
-        </div>
+        <label class="texto-input" id="basic-addon1">Nacionalidad</label>
+
+        <small class="form-text text-danger" *ngIf="nac.invalid">Este campo es obligatorio. Por favor, rellénelo
+          correctamente.</small>
+        <input class="form-control" 
+                type="text" 
+                ngModel name="nac" 
+                #nac="ngModel" 
+                [class.is-invalid]="nac.invalid"
+                pattern="[A-Z-Ña-zñÑáéíóúÁÉÍÓÚ]{5,}" 
+                required [ngModel]="autofill.nac">
+
       </div>
 
-      <div class="input-group mb-3">
-        <div class="row mb-3">
-          <label class="texto-input" id="basic-addon1">fecha de nacimiento</label>
-          <div class="col-sm-10">
-            <input class="form-control" type="text" ngModel name="bday" #bday="ngModel"
-              [class.is-invalid]="bday.invalid && bday.touched" pattern="\d{1,2}/\d{1,2}/\d{4}"
-              placeholder="dd/mm/aaaa" />
-          </div>
-        </div>
-        <div class="row mb-3">
-          <label class="texto-input" required id="basic-addon1">Primer apellido</label>
-          <div class="col-sm-10">
-            <input class="form-control" type="text" ngModel name="apellido" #apellido="ngModel"
-              [class.is-invalid]="apellido.invalid && apellido.touched" required pattern="[A-Za-z]{3,}"
-              placeholder="apellido 1">
-          </div>
-        </div>
+      <div class=" input-group mt-4 row">
+
+        <select class="form-control" 
+                [(ngModel)]="escogida" 
+                name="opcS" 
+                #opcS="ngModel"
+                [class.is-invalid]="opcS.invalid && opcS.touched" 
+                required>
+
+          <option [value]="option" *ngFor="let option of opciones">{{option}}</option>
+
+        </select>
+
+        <small class="form-text" [class.text-danger]="opcS.invalid && opcS.touched">Escriba su {{escogida}}</small>
+        <input (keyup.enter)="fillInfo(forma)" 
+                class="form-control" 
+                type="text" 
+                ngModel name="opcDni" 
+                #opcDni="ngModel"
+                [(ngModel)]=autofill.opcDNI 
+                [class.is-invalid]="opcDni.invalid && opcDni.touched" 
+                *ngIf="escogida==='DNI'"
+                required pattern="[0-9]{8}[A-Za-z]{1}" 
+                placeholder="XXXXXXXXX">
+
+        <input (keyup.enter)="fillInfo(forma)"
+               class="form-control ms-2" 
+               type="text"
+               ngModel name="opcPas"
+               #opcPas="ngModel" 
+               [(ngModel)]=autofill.opcPas 
+               [class.is-invalid]="opcPas.invalid && opcPas.touched"
+               *ngIf="escogida!=='DNI'" 
+               [disabled]="escogida===undefined" 
+               required pattern="[0-9]{9}" 
+               placeholder="XXXXXXXX">
+
       </div>
-      <!--  -->
+
+      <div class="input-group row mt-3">
+
+        <label class="texto-input" id="basic-addon1">fecha de nacimiento</label>
+
+        <input class="form-control" 
+               type="text" 
+               ngModel name="bday" 
+               #bday="ngModel"
+               [class.is-invalid]="bday.invalid && bday.touched" 
+               pattern="\d{1,2}/\d{1,2}/\d{4}" 
+               placeholder="dd/mm/aaaa" />
+
+        <label class="texto-input mt-3" required id="basic-addon1">Primer apellido</label>
+
+        <input class="form-control" 
+               type="text" 
+               ngModel name="apellido" 
+               #apellido="ngModel"
+               [class.is-invalid]="apellido.invalid && apellido.touched" 
+               required pattern="[A-Za-z]{3,}"
+               placeholder="apellido 1">
+
+      </div>
+      
       <div class="container mt-4 mb-3">
+
         <div class="d-flex justify-content-around">
+
           <button type="button" class="btn btn-primary" [routerLink]="[ '/home' ]">Salir</button>
           <button type="button" class="btn btn-primary" [routerLink]="[ '/page4' ]">Continuar</button>
+
         </div>
+
       </div>
 
     </form>
+
   </div>
 
 </ion-content>
@@ -93,4 +142,3 @@
   <ion-toolbar color="osakidetza">
   </ion-toolbar>
 </ion-footer>
-

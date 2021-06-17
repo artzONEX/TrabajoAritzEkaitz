@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
- @Input() nocturno:boolean=false;
+ 
   constructor() { }
 
   ngOnInit() {}
@@ -14,11 +14,9 @@ export class HeaderComponent implements OnInit {
   toggleTheme(event){
     if (event.detail.checked){
       document.body.setAttribute('color-theme', 'dark');
-      this.nocturno=true;
       
     }else{
       document.body.setAttribute('color-theme', 'light');
-      this.nocturno=false;
     }
   }
 
